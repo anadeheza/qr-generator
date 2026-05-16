@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+.dynapuff-font {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+    font-family: "DynaPuff", system-ui;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #451a00;
+}
+
+.container {
+    background: rgb(255, 238, 214);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(95, 28, 10, 0.381);
+    text-align: center;
+    max-width: 400px;
+    width: 70%;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+button {
+    font-family: "DynaPuff", system-ui;
+    background-color: #451a00;
+    color: rgb(255, 208, 173);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7f2d00;
+}
+
+
+.reset, .download {
+    background-color: #451a00;
+    color: rgb(255, 208, 173);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.reset:hover {
+    background-color: #7f2d00;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>QR generator!</h2>
+        <p>Enter an URL or text to generate ;)</p>
+
+        <form method="POST">
+            <input type="text" name="user_input" placeholder="https://supercoolweb.com" required>
+            <br>
+            <button type="submit">Generate</button>
+        </form>
+
+        {% if qr_data %}
+            <div>
+                <h3>Your QR</h3>
+                <img id="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ qr_data }}" alt="QR Code" crossorigin="anonymous">
+            
+                <br>
+                <a href="/" class="reset">Clear</a>
+                <button onclick="download()" class="download">Download</button>
+            </div>
+        {% endif %}
+
+        <script>
+            function download() {
+                const img = document.getElementById('qr-img')
+
+                const canvas = document.createElement('canvas')
+                canvas.width = img.naturalWidth
+                canvas.height = img.naturalHeight
+                const ctx = canvas.getContext('2d')
+
+                ctx.drawImage(img, 0, 0)
+
+                const a = document.createElement('a')
+                a.href = canvas.toDataURL('image/png')
+                a.download = 'qrcode.png'
+                document.body.appendChild(a)
+                a.click()
+                document.body.removeChild(a)
+            }
+        </script>
+    </div>
+    
+</body>
+</html>
