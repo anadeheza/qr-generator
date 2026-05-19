@@ -20,6 +20,8 @@ def home():
 
     if(existe_url(qr_text)):
         return render_template("index.html", qr_data = qr_text)
+    else:
+        return
 
 if __name__ == "__main__":
     import os 
