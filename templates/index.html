@@ -17,6 +17,10 @@
             <button type="submit">Generate</button>
         </form>
 
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
         {% if qr_data %}
             <div>
                 <h3>Your QR</h3>

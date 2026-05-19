@@ -68,3 +68,8 @@ button:hover {
 .reset:hover {
     background-color: #7f2d00;
 }
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
