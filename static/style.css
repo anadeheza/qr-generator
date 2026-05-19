@@ -70,6 +70,6 @@ button:hover {
 }
 
 .error {
-    color: red;
+    color: rgb(162, 3, 3);
     margin-top: 10px;
 }
