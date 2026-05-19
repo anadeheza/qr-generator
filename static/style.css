@@ -10,31 +10,33 @@
 }
 
 body {
+    background: linear-gradient(135deg, rgb(243, 146, 137), rgb(251, 192, 145), rgb(150, 100, 0));
     font-family: "DynaPuff", system-ui;
-    background-color: #f4f7f6;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: #451a00;
+    color: #441a01;
 }
 
 .container {
-    background: rgb(255, 238, 214);
+    background: rgba(255, 149, 0, 0.116);
     padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(95, 28, 10, 0.381);
+    border: 1px solid #792c007b;
+    border-radius: 40px;
+    box-shadow: 0 0 30px rgba(95, 28, 10, 0.381);
     text-align: center;
     max-width: 400px;
     width: 70%;
 }
 
-input[type="text"] {
+.text {
     width: 80%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c36536;
     border-radius: 10px;
 }
 
@@ -51,7 +53,6 @@ button {
 button:hover {
     background-color: #7f2d00;
 }
-
 
 .reset, .download {
     background-color: #451a00;
@@ -72,4 +73,15 @@ button:hover {
 .error {
     color: rgb(162, 3, 3);
     margin-top: 10px;
+}
+
+img {
+    padding: 25px;
+}
+
+.imagen {
+    margin-left: 65px;
+    max-width: 70%;
+    background-color: #ffffff20;
+    border-radius: 40px;   
 }
